@@ -37,7 +37,7 @@ This application was developed as part of a simulated black-box iOS penetration 
 ### Steps
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/securebank-demo-app.git
+git clone https://github.com/NE4TRON/securebank-demo-app.git
 cd securebank-demo-app
 npm install
 npm start
