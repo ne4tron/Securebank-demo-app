@@ -1,0 +1,7 @@
+Vulnerability	Description
+
+Hardcoded API Keys	Located in the code base (SecureBankApp.js)
+Auth Bypass	isLoggedIn() logic can be overridden (Frida)
+Insecure Local Storage	Simulated PII in plaintext (userInfo)
+No SSL Pinning	Ideal for Burp Suite interception
+Jailbreak Detection Weak	Not implemented in frontend
