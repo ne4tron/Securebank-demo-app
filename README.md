@@ -1,73 +1,67 @@
-# 🏦 SecureBank iOS/Android Demo App
+# 🏦 SecureBank iOS Demo App
 
-**SecureBank** is a deliberately vulnerable mobile banking application built with React Native. Designed for **educational use only**, it simulates real-world security flaws found in mobile apps to help security professionals practice penetration testing, reverse engineering, and secure coding techniques.
-
----
-
-## 🔍 Overview
-
-SecureBank simulates the front end of a banking application with intentionally insecure features. It provides a safe environment to learn and test tools and techniques against:
-
-- Mobile app vulnerabilities
-- Weak security design patterns
-- Realistic penetration testing scenarios
+**SecureBank** is a deliberately vulnerable iOS mobile banking app built with **React Native**. Designed for **educational use in iOS penetration testing**, this app simulates real-world flaws found in iOS applications, making it perfect for training with Frida, Objection, and MobSF.
 
 ---
 
 ## ⚠️ Disclaimer
 
-> **This project is intentionally insecure and should be used for learning and authorized testing only. Do NOT deploy or connect to real services or use with real credentials.**
+> This app is **intentionally insecure**. It is for **educational** and **authorized testing** only. Do **not** connect to real banking APIs, use real credentials, or deploy in production environments.
 
 ---
 
-## 📦 Features
+## 📱 Purpose
 
-- 🔐 **Simulated Login**: Bypassable hardcoded authentication
-- 🔑 **Hardcoded API Keys**: In plaintext within app files
-- 📁 **Insecure Local Storage**: Plaintext in AsyncStorage
-- 🌐 **No SSL Pinning**: Allows MITM traffic inspection
-- 🔍 **Weak Jailbreak Detection**: Easily bypassed
-- 🎯 Designed for testing with:
-  - Frida
-  - Objection
-  - MobSF
-  - Burp Suite
-  - Ghidra
+SecureBank replicates vulnerable logic and insecure storage patterns commonly seen in iOS applications to support security researchers, students, and red teams.
+
+Built to be tested with:
+
+- 🧬 [Frida](https://frida.re/)
+- 🔍 [Objection](https://github.com/sensepost/objection)
+- 🧰 [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
+- 📡 [Burp Suite](https://portswigger.net/burp)
+- 🧠 [Ghidra](https://ghidra-sre.org/)
 
 ---
 
-## 🛠️ Technologies Used
+## 🚨 Key Vulnerabilities Simulated
 
-- [React Native](https://reactnative.dev/)
-- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
-- [React Navigation](https://reactnavigation.org/)
+| Vulnerability        | Description                                                       |
+|----------------------|-------------------------------------------------------------------|
+| 🔐 Hardcoded Secrets | API keys and credentials embedded directly in source code         |
+| 🔓 Login Bypass      | Authentication logic handled entirely on the client               |
+| 📁 Insecure Storage  | Sensitive user data stored in plaintext in AsyncStorage           |
+| 🧾 No SSL Pinning    | API traffic uses HTTP; no certificate validation                  |
+| 📱 Jailbreak Bypass  | Detection logic trivially bypassable using Frida or Objection     |
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (macOS for iOS only)
 
-### ✅ Prerequisites (Linux + Android)
+### ✅ Prerequisites
 
-- Node.js & npm
-- Java JDK 17+
-- Android Studio with SDK & emulator
+- macOS with [Xcode](https://developer.apple.com/xcode/) installed
+- [Node.js](https://nodejs.org/)
+- [CocoaPods](https://guides.cocoapods.org/using/getting-started.html): `sudo gem install cocoapods`
+- [React Native CLI](https://reactnative.dev/docs/environment-setup) (`npm install -g react-native-cli`)
 
-### 📥 Install & Run
+### ⚙️ Setup & Run
 
 ```bash
-# Install system dependencies
-sudo apt update && sudo apt install -y openjdk-17-jdk wget unzip
+# Clone the repo
+git clone https://github.com/your-username/SecureBank.git
+cd SecureBank
 
-# Download project
-wget <replace_with_your_zip_or_clone_link> -O SecureBank.zip
-unzip SecureBank.zip && cd SecureBank
-
-# Install React Native CLI and dependencies
-npm install -g react-native-cli
+# Install Node dependencies
 npm install
 
-# Start on Android device/emulator
-npx react-native run-android
+# Install iOS native dependencies
+cd ios && pod install && cd ..
+
+# Run the app on iOS simulator
+npx react-native run-ios
+
+
 
 
 
