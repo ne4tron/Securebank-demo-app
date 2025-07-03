@@ -41,6 +41,6 @@ unzip SecureBank.zip && cd SecureBank
 npm install -g react-native-cli
 npm install
 
-# Run on Android
+# ▶️ Run the app on an Android device or emulator
 npx react-native run-android
 
