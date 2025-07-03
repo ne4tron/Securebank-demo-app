@@ -47,4 +47,11 @@ npm install
 # ▶️ Run the app on an Android device or emulator
 npx react-native run-android
 
+📌 Notes
+Ensure Android Studio is installed with an emulator or connect an Android device with USB debugging enabled.
+
+If using a physical device, run adb devices to confirm it's recognized.
+
+If you want a backend mock API server, I can provide one too.
+
 
