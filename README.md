@@ -1,57 +1,77 @@
+# 🏦 SecureBank iOS/Android Demo App
 
-# 🏦 SecureBank iOS Demo App
-
-**SecureBank** is a deliberately vulnerable mobile banking app built with React Native for iOS. It is designed for educational purposes in mobile penetration testing, reverse engineering, and secure coding practices.
-
----
-
-## 🔍 About
-
-This app simulates a mobile banking environment and includes a variety of common mobile security vulnerabilities:
-
-- 🔑 Hardcoded API keys and credentials
-- 🔓 Bypassable login logic
-- 📁 Insecure data storage (plaintext)
-- 🔐 No SSL/TLS or certificate pinning
-- 📱 Weak jailbreak/root detection
+**SecureBank** is a deliberately vulnerable mobile banking application built with React Native. Designed for **educational use only**, it simulates real-world security flaws found in mobile apps to help security professionals practice penetration testing, reverse engineering, and secure coding techniques.
 
 ---
 
-## 🚀 Features
+## 🔍 Overview
 
-- Simulated login screen with weak authentication
-- Dashboard with fake account info
-- Local storage of sensitive user data in plaintext
-- Hardcoded secrets for key management testing
-- Designed for testing with Frida, MobSF, Burp Suite, Objection, and Ghidra
+SecureBank simulates the front end of a banking application with intentionally insecure features. It provides a safe environment to learn and test tools and techniques against:
+
+- Mobile app vulnerabilities
+- Weak security design patterns
+- Realistic penetration testing scenarios
 
 ---
 
+## ⚠️ Disclaimer
 
-# 📦 Install system dependencies
+> **This project is intentionally insecure and should be used for learning and authorized testing only. Do NOT deploy or connect to real services or use with real credentials.**
+
+---
+
+## 📦 Features
+
+- 🔐 **Simulated Login**: Bypassable hardcoded authentication
+- 🔑 **Hardcoded API Keys**: In plaintext within app files
+- 📁 **Insecure Local Storage**: Plaintext in AsyncStorage
+- 🌐 **No SSL Pinning**: Allows MITM traffic inspection
+- 🔍 **Weak Jailbreak Detection**: Easily bypassed
+- 🎯 Designed for testing with:
+  - Frida
+  - Objection
+  - MobSF
+  - Burp Suite
+  - Ghidra
+
+---
+
+## 🛠️ Technologies Used
+
+- [React Native](https://reactnative.dev/)
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+- [React Navigation](https://reactnavigation.org/)
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites (Linux + Android)
+
+- Node.js & npm
+- Java JDK 17+
+- Android Studio with SDK & emulator
+
+### 📥 Install & Run
+
+```bash
+# Install system dependencies
 sudo apt update && sudo apt install -y openjdk-17-jdk wget unzip
 
-# 📁 Download and unzip the SecureBank project
-wget https://sandbox:/mnt/data/SecureBank.zip -O SecureBank.zip
+# Download project
+wget <replace_with_your_zip_or_clone_link> -O SecureBank.zip
 unzip SecureBank.zip && cd SecureBank
 
-# 📦 Install Node and React Native CLI (if not already installed)
+# Install React Native CLI and dependencies
 npm install -g react-native-cli
-
-# 📦 Install project dependencies
 npm install
 
-# ✅ Start Metro bundler in a separate terminal (optional)
-# npx react-native start
-
-# ▶️ Run the app on an Android device or emulator
+# Start on Android device/emulator
 npx react-native run-android
 
-📌 Notes
 
-Ensure Android Studio is installed with an emulator or connect an Android device with USB debugging enabled.
 
-If using a physical device, run adb devices to confirm it's recognized.
+
 
 
 
