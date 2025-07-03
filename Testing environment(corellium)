@@ -1,0 +1,32 @@
+🧪 Testing Environment (Corellium)
+This app is tested on a virtual iPhone 14 Pro using Corellium.
+
+✅ Corellium Setup Tips
+Use a jailbroken iOS image (14.0+)
+
+Connect via SSH and install:
+
+frida-server via APT
+
+SSL certs for Burp Suite
+
+Tools run from host:
+
+Objection CLI
+
+Frida CLI/scripts
+
+🎯 Real-World Simulation Goals
+Scenario	Objective
+Frida/Objection Hook	Bypass login logic, hook methods, patch runtime
+SSL MITM	Intercept traffic with Burp (no SSL pinning)
+Storage Inspection	View plaintext user info via SSH or Objection
+Reverse Engineering	Pull and disassemble .app for static analysis
+
+🔧 Tools to Use
+Tool	Purpose
+Frida	Runtime hooking & instrumentation
+Objection	iOS app bypass, inspection
+MobSF	Static/dynamic mobile analysis
+Burp Suite	Proxy and intercept HTTP/HTTPS
+Ghidra	Reverse engineer app binaries
