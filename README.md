@@ -1,5 +1,5 @@
 
-# 💳 SecureBank Demo App
+# 💳 SecureBank IOS Demo App
 
 A mock iOS banking application built in React to simulate real-world mobile security vulnerabilities. Designed for educational use in mobile penetration testing, reverse engineering, and application security analysis.
 
