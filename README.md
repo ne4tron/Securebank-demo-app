@@ -49,7 +49,7 @@ Built to be tested with:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/SecureBank.git
+git clone https://github.com/NE4TRON/SecureBank.git
 cd SecureBank
 
 # Install Node dependencies
