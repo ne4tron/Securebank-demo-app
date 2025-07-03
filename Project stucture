@@ -1,0 +1,11 @@
+SecureBank/
+├── App.js
+├── components/
+│   ├── LoginScreen.js
+│   ├── DashboardScreen.js
+│   └── JailbreakCheck.js
+├── constants/
+│   └── config.js
+├── ios/
+├── utils/
+├── README.md
