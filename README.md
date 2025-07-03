@@ -53,6 +53,6 @@ Ensure Android Studio is installed with an emulator or connect an Android device
 
 If using a physical device, run adb devices to confirm it's recognized.
 
-If you want a backend mock API server, I can provide one too.
+
 
 
