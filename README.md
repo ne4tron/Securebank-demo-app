@@ -1,43 +1,46 @@
 
-# 💳 SecureBank IOS Demo App
+# 🏦 SecureBank iOS Demo App
 
-A mock iOS banking application built in React to simulate real-world mobile security vulnerabilities. Designed for educational use in mobile penetration testing, reverse engineering, and application security analysis.
+**SecureBank** is a deliberately vulnerable mobile banking app built with React Native for iOS. It is designed for educational purposes in mobile penetration testing, reverse engineering, and secure coding practices.
 
 ---
 
 ## 🔍 About
 
-This application was developed as part of a simulated black-box iOS penetration test. It replicates multiple critical vulnerabilities commonly found in mobile apps, including:
+This app simulates a mobile banking environment and includes a variety of common mobile security vulnerabilities:
 
-- Hardcoded API keys  
-- Bypassable authentication logic  
-- Insecure data storage  
-- Missing SSL pinning  
-- Weak jailbreak detection
+- 🔑 Hardcoded API keys and credentials
+- 🔓 Bypassable login logic
+- 📁 Insecure data storage (plaintext)
+- 🔐 No SSL/TLS or certificate pinning
+- 📱 Weak jailbreak/root detection
 
 ---
 
 ## 🚀 Features
 
-- 🔐 Simulated login with bypassable logic  
-- 📊 Dashboard with account balance and user info  
-- 📁 User data stored in plaintext for inspection  
-- ⚠️ No SSL/TLS or certificate pinning  
-- 🎯 Designed for Frida, Burp Suite, MobSF, Objection, and Ghidra testing
+- Simulated login screen with weak authentication
+- Dashboard with fake account info
+- Local storage of sensitive user data in plaintext
+- Hardcoded secrets for key management testing
+- Designed for testing with Frida, MobSF, Burp Suite, Objection, and Ghidra
 
 ---
 
-## 🛠️ Installation
-
-### Prerequisites
-
-- Node.js (v18 or newer recommended)  
-- npm or yarn
-
-### Steps
+## ⚙️ Installation (Linux / Android)
 
 ```bash
-git clone https://github.com/NE4TRON/securebank-demo-app.git
-cd securebank-demo-app
+# Install dependencies
+sudo apt update && sudo apt install -y openjdk-17-jdk wget unzip
+
+# Download and unzip
+wget <replace_with_your_link> -O SecureBank.zip
+unzip SecureBank.zip && cd SecureBank
+
+# Install React Native CLI and project deps
+npm install -g react-native-cli
 npm install
-npm start
+
+# Run on Android
+npx react-native run-android
+
