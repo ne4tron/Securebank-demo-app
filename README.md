@@ -27,20 +27,24 @@ This app simulates a mobile banking environment and includes a variety of common
 
 ---
 
-## ⚙️ Installation (Linux / Android)
 
-```bash
-# Install dependencies
+# 📦 Install system dependencies
 sudo apt update && sudo apt install -y openjdk-17-jdk wget unzip
 
-# Download and unzip
-wget <replace_with_your_link> -O SecureBank.zip
+# 📁 Download and unzip the SecureBank project
+wget https://sandbox:/mnt/data/SecureBank.zip -O SecureBank.zip
 unzip SecureBank.zip && cd SecureBank
 
-# Install React Native CLI and project deps
+# 📦 Install Node and React Native CLI (if not already installed)
 npm install -g react-native-cli
+
+# 📦 Install project dependencies
 npm install
+
+# ✅ Start Metro bundler in a separate terminal (optional)
+# npx react-native start
 
 # ▶️ Run the app on an Android device or emulator
 npx react-native run-android
+
 
